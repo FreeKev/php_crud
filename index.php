@@ -1,3 +1,4 @@
+<?php include('server.php'); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -15,20 +16,22 @@
         </tr>
       </thread>
       <tbody>
-        <tr>
-          <td>John</td>
-          <td>United States</td>
-          <td>
-            <a href="#">Edit</a>
-          </td>
-          <td>
-            <a href="#">Delete</a>
-          </td>
-        </tr>
+        <?php while ($row = mysqli_fetch_array($results)) { ?>
+            <tr>
+              <td><?php echo $row['name'] ?></td>
+              <td><?php echo $row['address'] ?></td>
+              <td>
+                <a href="#">Edit</a>
+              </td>
+              <td>
+                <a href="#">Delete</a>
+              </td>
+            </tr>
+          <?php } ?>
       </tbody>
     </table>
 
-    <form method="post" action="">
+    <form method="post" action="server.php">
       <div class="input-group">
         <label>Name</label>
         <input type="text" name="name">
