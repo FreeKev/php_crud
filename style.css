@@ -57,5 +57,32 @@ form {
   color: white;
   background: #5F9EA0;
   border: none;
-  border-radius: 5px; 
+  border-radius: 5px;
+}
+
+.msg {
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 10px;
+  color: #3c763d;
+  background: #dff0d8;
+  border: 1px solid #3c763d;
+  width: 50%;
+  text-align: center;
+}
+
+.edit_btn {
+  text-decoration: none;
+  padding: 2px 5px;
+  background: #2E8B57;
+  color: white;
+  border-radius: 3px;
+}
+
+.del_btn {
+  text-decoration: none;
+  padding: 2px 5px;
+  color: white;
+  border-radius: 3px;
+  background: #800000;
 }
